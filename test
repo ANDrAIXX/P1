@@ -1,0 +1,46 @@
+#include <iostream> 
+#include <string> 
+#include <cmath> 
+#include <vector> 
+
+using namespace std;
+
+void Sort_God_Izd(vector <int> mas, int dlina)
+{
+    int shet, element, container;
+    for (shet = 1; shet < dlina; shet++)
+    {
+        for (element = dlina - 1; element >= shet; element--)
+        {
+            if (mas[element] > mas[element - 1])
+            {
+                container = mas[element - 1];
+                mas[element - 1] = mas[element];
+                mas[element] = container;
+            }
+        }
+    }
+    system("cls");
+    for (int shet = 0; shet < dlina; shet++)
+    {
+        cout << mas[shet] << endl;
+    }
+
+}
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int dlina, god_izd;
+    vector <int> mas;
+    cout << "ВВедите кол-во годов изданий: ";
+    cin >> dlina;
+    for (int shet = 0; shet < dlina; shet++)
+    {
+        cin >> god_izd;
+        mas.push_back(god_izd);
+    }
+
+    Sort_God_Izd(mas, dlina);
+
+}
