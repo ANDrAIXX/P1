@@ -1,0 +1,10 @@
+class RedButton:
+    def __init__(self):
+        self.countt = 0
+    
+    def click(self):
+        print("Тревога!")
+        self.countt += 1
+
+    def count(self):
+        return (self.countt)

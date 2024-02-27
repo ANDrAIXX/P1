@@ -1,0 +1,23 @@
+import random
+
+class MusicAlbum:
+
+    def __init__(self, title, artist, release_year, genre, traclist):
+        self.title = title
+        self.artist = artist
+        self.release_year = release_year
+        self.genre=genre
+        self.traclist = traclist
+
+    def play_random_track(self):
+        return self.traclist[random.randint(0,len(self.traclist)-1)]   
+        
+
+MusicAlbum1 = MusicAlbum(title="Limon", artist="Tima", release_year="2005", genre="Rock", traclist=["Yumi", "Tuda", "V nicuda"])
+print(f"Name: {MusicAlbum1.title}")
+print(f"Artist: {MusicAlbum1.artist}")
+print(f"Realise Year: {MusicAlbum1.release_year}")
+print(f"Genre: {MusicAlbum1.genre}")
+print(f"Track List: {MusicAlbum1.traclist}")
+print(f"Random Track: {MusicAlbum1.play_random_track()}")
+
